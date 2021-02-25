@@ -1,2 +1,3 @@
 # pemsi
- tugas pemerograman simulasi
+ Tugas pemerograman simulasi
+repo berisi kumpulan tugas pemsi

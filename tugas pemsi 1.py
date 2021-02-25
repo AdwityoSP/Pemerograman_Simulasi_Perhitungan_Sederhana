@@ -9,12 +9,17 @@ h = [ ] #∑X(^2)
 j = [ ] #∑Y
 k = [ ] #(∑Yi)(∑Xi^2)
 l = [ ] #(∑Xi)(∑XiYi)
-m = [ ] #(n ∑Xi^2)
+m = [ ] #(n.∑Xi^2)
 o = [ ] #(∑Xi)^2
 p = [ ] #((∑Yi)(∑Xi^2))-((∑Xi)(∑XiYi))
-q = [ ] #((n ∑Xi^2)-((∑Xi)^2))
-r = [ ] #hasil
-
+q = [ ] #((n.∑Xi^2)-((∑Xi)^2))
+r = [ ] #a = ((∑Yi)(∑Xi^2))-((∑Xi)(∑XiYi))/((n.∑Xi^2)-((∑Xi)^2))
+s = [ ] #(n.∑XiYi)
+t = [ ] #(∑Xi)(∑Yi)
+u = [ ] #(n(∑Xi))
+v = [ ] #((∑Xi)(∑Yi))-(n(∑Xi))
+w = [ ] #((∑X(^2))-((∑Xi)^2))
+z = [ ] #b = ((∑Xi)(∑Yi))-(n(∑Xi))/((∑X(^2))-((∑Xi)^2))
 n = int(input("masukan jumlah n : "))
 
 def X0() :
@@ -74,7 +79,7 @@ def X8():
     for i in range(0,n):
         a=n*e[i]
         m.append(a)
-        print("n.(∑Xi^2) : "+str(a))
+        print("(n.(∑Xi^2)) ke- "+str(i+1)+" :"+str(a))
     
 
 def X9():
@@ -85,19 +90,56 @@ def X9():
 def X10():
     a=k[0]-l[0]
     p.append(a)
-    print("((∑Yi)(∑Xi^2))-((∑Xi)(∑XiYi)) : "+str(a))
+    print("((∑Yi)(∑Xi^2))-((∑Xi)(∑XiYi)) "+str(a))
 
 def X11():
     for i in range(0,n):
         a=m[i]-o[0]
         q.append(a)
-        print("((n ∑Xi^2)-((∑Xi)^2)) : "+str(a))
+        print("((n.∑Xi^2)-((∑Xi)^2)) ke- "+str(i+1)+" :"+str(a))
 
 def X12():
     for i in range(0,n):
         a=float(p[0]/q[i])
         r.append(a)
         print("a ke-"+str(i+1) +":"+str(a))
+
+def X13():
+    a=n*d[0]
+    s.append(a)
+    print("(n.∑XiYi) :"+str(a))
+
+def X14():
+    a=g[0]*j[0]
+    t.append(a)
+    print("(∑Xi)(∑Yi) :"+str(a))
+
+def X15():
+    a=n*g[0]
+    u.append(a)
+    print("n(∑Xi) :"+str(a))
+
+def X16():
+        a=s[0]-t[0]
+        v.append(a)
+        print("((∑Xi)(∑Yi))-(n(∑Xi)) :"+str(a))
+
+def X17():
+    a=u[0]-h[0]
+    w.append(a)
+    print("((∑X(^2))-((∑Xi)^2)) :"+str(a))
+
+def X18():
+    a=v[0]/w[0]
+    z.append(a)
+    print("b :"+str(a))
+
+def X19():
+    if z[0]>0:
+        a="+"
+    else :
+        a=""
+    print("Y = "+str(r[0])+a+str(z[0])+"X") 
 
 X0()
 X1()
@@ -112,3 +154,10 @@ X9()
 X10()
 X11()
 X12()
+X13()
+X14()
+X15()
+X16()
+X17()
+X18()
+X19()

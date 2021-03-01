@@ -24,9 +24,9 @@ def mulai(pilih) :
     aa = [ ] #∑Y^2
     bb = [ ] #∑X(^2)
     cc = [ ] #(n.∑Yi^2)
-    dd = [ ]
-    ee = [ ]
-    ff = [ ]
+    dd = [ ] #(n.(∑Yi^2))-(∑Y(^2))
+    ee = [ ] #((n.∑Xi^2)-(∑X(^2)*(n.(∑Yi^2)))-(∑Y(^2)))
+    ff = [ ] #Rxy
     n = int(input("masukan jumlah n (minimal 2 titik): "))
 
     def X0() :

@@ -27,7 +27,7 @@ def mulai(pilih) :
     dd = [ ] #(n.(∑Yi^2))-(∑Y(^2))
     ee = [ ] #((n.∑Xi^2)-(∑X(^2)*(n.(∑Yi^2)))-(∑Y(^2)))
     ff = [ ] #Rxy
-    n = int(input("masukan jumlah n (minimal 2 titik): "))
+    n = int(input("masukan jumlah n (minimal 2 titik & tidak boleh sama lokasi) : "))
 
     def X0() :
         
@@ -43,8 +43,12 @@ def mulai(pilih) :
         print("n : "+str(n))
 
     def X2():
-        a=sum(x)
-        b=sum(y)
+        a=0
+        for i in range(0,n):
+            a=a+x[i]
+        b=0
+        for i in range(0,n):
+            b=b+y[i]
         print("∑X : "+str(a))
         print("∑Y : "+str(b))
         g.append(a)
@@ -55,17 +59,21 @@ def mulai(pilih) :
         for i in range(0,n):
             a = x[i]*y[i] 
             c.append(a)
-        b=sum(c)
-        d.append(b)
-        print("∑XY : "+str(b))
+        a=0
+        for i in range(0,n):
+            a=a+c[i]
+        d.append(a)
+        print("∑XY : "+str(a))
 
     def X4():
         for i in range(0,n):
             a = x[i]**2
             e.append(a)
-        b=sum(e)
-        f.append(b)
-        print("∑X^2 : "+str(b))    
+        a=0
+        for i in range(0,n):
+            a=a+e[i]
+        f.append(a)
+        print("∑X^2 : "+str(a))    
 
     def X5():
         a = g[0]**2
@@ -148,9 +156,11 @@ def mulai(pilih) :
         for i in range(0,n):
             a = y[i]**2
             o.append(a)
-        b=sum(o)
-        aa.append(b)
-        print("∑Y^2 : "+str(b))
+        a=0
+        for i in range(0,n):
+            a=a+o[i]
+        aa.append(o)
+        print("∑Y^2 : "+str(a))
 
     def X21():
         for i in range(0,n):
@@ -230,12 +240,13 @@ def mulai(pilih) :
     else :
         print("nomor salah")
 
-    print ("mulai lagi ?(Y/N)")
+    print ("mulai lagi ?(y/n)")
     lagi=str(input())
-    if lagi==('Y'):
+    if lagi==('y'or'Y'):
         pilihan()
         mulai(pilih)
-    elif lagi==('N'):
+    elif lagi==('n'or'N'):
+        print('program selesai')
         quit()
 
 print("Aplikasi Regresi Linier & Korelasi Pearson")

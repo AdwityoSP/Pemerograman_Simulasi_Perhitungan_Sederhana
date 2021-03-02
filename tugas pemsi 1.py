@@ -250,7 +250,7 @@ def mulai(pilih) :
         quit()
 
 print("Aplikasi Regresi Linier & Korelasi Pearson")
-print("Adwityo S.P 1520180Pemerograman Simulasi 1")
+print("Adwityo S.P 1520180 Pemerograman Simulasi 1")
 print("==========================================")
 print("1.Regresi Linier")
 print("2.Korelasi Pearson")

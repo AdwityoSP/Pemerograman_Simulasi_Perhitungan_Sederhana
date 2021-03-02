@@ -14,6 +14,9 @@ bb=0#pengelompokan
 cc=0#pengelompokan
 dd=0#pengelompokan
 ee=0#pengelompokan
+print("Aplikasi Metode Prediksi Monte Carlo")
+print("Adwityo S.P 1520180 Pemerograman Simulasi 2")
+print("==========================================")
 #n angka
 n=int(input("masukan jumlah angka : "))
 for i in range (0,n) :
